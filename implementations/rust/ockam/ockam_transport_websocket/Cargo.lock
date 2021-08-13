@@ -222,6 +222,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "core2"
+version = "0.3.1"
+source = "git+https://github.com/antoinevg/core2.git?branch=antoinevg/add-read-to-end#3310b6fbcc7b7c9d2c48841006fb2118289390dc"
+dependencies = [
+ "memchr",
+]
+
+[[package]]
 name = "cortex-m"
 version = "0.7.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -813,7 +821,7 @@ dependencies = [
  "rand 0.8.4",
  "serde",
  "serde-big-array",
- "serde_bare 0.4.0",
+ "serde_bare",
  "sha2",
  "signature_bbs_plus",
  "signature_bls",
@@ -835,7 +843,7 @@ dependencies = [
  "ockam_vault_sync_core",
  "rand 0.8.4",
  "serde",
- "serde_bare 0.4.0",
+ "serde_bare",
  "tracing",
 ]
 
@@ -848,7 +856,7 @@ dependencies = [
  "hex",
  "rand 0.8.4",
  "serde",
- "serde_bare 0.4.0",
+ "serde_bare",
 ]
 
 [[package]]
@@ -871,7 +879,7 @@ dependencies = [
  "rand 0.8.4",
  "serde",
  "serde-big-array",
- "serde_bare 0.4.0",
+ "serde_bare",
  "sha2",
  "signature_bbs_plus",
  "signature_bls",
@@ -927,7 +935,7 @@ dependencies = [
  "ockam_node",
  "rand 0.7.3",
  "serde",
- "serde_bare 0.3.0",
+ "serde_bare",
  "tokio",
  "tracing",
 ]
@@ -941,7 +949,7 @@ dependencies = [
  "ockam",
  "ockam_core",
  "ockam_node",
- "serde_bare 0.4.0",
+ "serde_bare",
  "tokio",
  "tokio-tungstenite",
  "tracing",
@@ -1305,19 +1313,10 @@ dependencies = [
 
 [[package]]
 name = "serde_bare"
-version = "0.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "01db2255aa98fb93ad74272d8b2e6fd4851860e733e944b9439cf148127164b2"
-dependencies = [
- "serde",
-]
-
-[[package]]
-name = "serde_bare"
 version = "0.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "adbd09b1e0b45fadbc163e4ea1f4224b451146ba4f01963c69975780c33215fa"
+source = "git+ssh://git@github.com/ockam-network/serde_bare.git?branch=ockam-network/no_std+alloc#34fa8b1230c1d48af003035e53ba32997c82082b"
 dependencies = [
+ "core2",
  "serde",
 ]
 
