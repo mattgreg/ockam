@@ -12,6 +12,7 @@ async fn main(mut ctx: Context) -> Result<()> {
     let tcp = TcpTransport::create(&ctx).await?;
 
     let channel = fabric_machine.create_secure_channel(
+        // route![(TCP, "aac340208ad4e4417bfa3e9ce0dc2805-236f3013757d7342.elb.us-west-1.amazonaws.com:4000"), "secure_channel_listener"],
         route![(TCP, "127.0.0.1:4000"), "secure_channel_listener"],
         TrustEveryonePolicy,
     )?;
